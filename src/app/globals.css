@@ -16,7 +16,8 @@
   --muted:      var(--color-whisper-gray);
 
   /* Typography */
-  --font-headline: var(--font-proxima-nova), system-ui, sans-serif;
+  --font-headline: var(--font-playfair), 'Playfair Display', serif;
+  --font-body:     var(--font-avenir), system-ui, sans-serif;
   --font-body:     var(--font-avenir), system-ui, sans-serif;
 }
 
@@ -49,6 +50,8 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
   font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 /* Base utility classes for layout */

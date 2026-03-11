@@ -6,9 +6,9 @@ export default function CallToAction() {
   return (
     <section id="apply" className={styles.cta}>
       <div className="container">
-        <h2>Ready to make an impact?</h2>
-        <p>Join a global network of leaders dedicated to actionable change.</p>
-        <Link href="#apply" className={compStyles.button} style={{ background: 'var(--foreground)', color: 'var(--color-white)' }}>
+        <h2>Applications for the 2026 cohort are now open.</h2>
+        <p className={styles.ctaSubtitle}>12 spots remain for the 2026 Leadership Initiative.</p>
+        <Link href="#apply" className={compStyles.buttonAccent}>
           Start Your Application
         </Link>
       </div>

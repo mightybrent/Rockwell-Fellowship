@@ -27,14 +27,17 @@ export default function Footer() {
           <h3>Connect</h3>
           <div className={styles.footerLinks}>
             <Link href="#contact">Contact Us</Link>
-            <Link href="#newsletter">Join the Newsletter</Link>
-            <Link href="#events">Upcoming Events</Link>
+            <Link href="#linkedin">LinkedIn</Link>
+            <Link href="#twitter">Twitter / X</Link>
           </div>
         </div>
       </div>
       <div className={styles.bottomBar}>
         <span>&copy; {new Date().getFullYear()} Rockwell Fellowship. All rights reserved.</span>
-        <span>Visual Identity System — Version 01</span>
+        <div style={{ display: 'flex', gap: '1.5rem' }}>
+          <Link href="#privacy">Privacy Policy</Link>
+          <Link href="#terms">Terms of Service</Link>
+        </div>
       </div>
     </footer>
   );

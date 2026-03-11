@@ -29,11 +29,11 @@ export default function Programs() {
         </div>
         <div className={styles.programsGrid}>
           {programs.map((p, i) => (
-            <div key={i} className={styles.programCard}>
+            <div key={i} className={`${styles.programCard} ${styles[`card${i}`]}`}>
               <span className={styles.programMeta}>{p.meta}</span>
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
-              <Link href="#" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Learn more &rarr;</Link>
+              <Link href="#" className={styles.programLink}>Learn more &rarr;</Link>
             </div>
           ))}
         </div>

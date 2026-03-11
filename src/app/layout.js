@@ -1,4 +1,4 @@
-import { Montserrat, Nunito_Sans } from "next/font/google";
+import { Montserrat, Nunito_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 // Using Montserrat as a close fallback for Proxima Nova
@@ -13,6 +13,12 @@ const avenirFallback = Nunito_Sans({
   variable: "--font-avenir",
   subsets: ["latin"],
   weight: ["400", "800", "900"],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -37,8 +43,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${proximaNovaFallback.variable} ${avenirFallback.variable}`}>
+    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
+      <body className={`${proximaNovaFallback.variable} ${avenirFallback.variable} ${playfairDisplay.variable}`}>
         {children}
       </body>
     </html>
