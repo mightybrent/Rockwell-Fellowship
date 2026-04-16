@@ -1,153 +1,937 @@
-/* Nav */
+/* ─── NAV ────────────────────────────────────────────────── */
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 5rem;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navScrolled {
+  background: rgba(237, 229, 211, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--color-warm-faint);
 }
 
 .logo {
-  font-family: var(--font-headline);
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--foreground);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--foreground);
+  letter-spacing: -0.01em;
 }
 
 .logoMark {
-  background: var(--primary);
-  color: var(--color-white);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-paperboard-brown);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  border-radius: 6px;
+  letter-spacing: 0;
+}
+
+.logoName {
+  color: var(--foreground);
 }
 
 .navLinks {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 2.5rem;
 }
 
 .navLink {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--foreground);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.navCta {
   font-family: var(--font-headline);
+  font-size: 0.875rem;
   font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  letter-spacing: 0.05em;
-  transition: color 0.2s ease, border-color 0.2s ease;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 0.25rem;
-}
-
-.navLink:hover, .navLink.active {
-  color: var(--primary);
-  border-color: var(--primary);
-}
-
-.button {
-  background: var(--primary);
-  color: var(--color-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 700;
-  font-family: var(--font-headline);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: background 0.2s ease, transform 0.2s ease;
-  display: inline-block;
-  cursor: pointer;
-  border: none;
-}
-
-.button:hover {
+  padding: 0.55rem 1.25rem;
   background: var(--color-charcoal-black);
+  color: #fff;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.navCta:hover {
+  background: var(--color-paperboard-brown);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburgerBar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--foreground);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.barOpen1 { transform: translateY(7px) rotate(45deg); }
+.barOpen2 { opacity: 0; }
+.barOpen3 { transform: translateY(-7px) rotate(-45deg); }
+
+/* When menu is open, hamburger sits above drawer and bars turn charcoal */
+.navMenuOpen {
+  z-index: 105;
+}
+
+.navMenuOpen .hamburgerBar {
+  background: var(--color-charcoal-black) !important;
+}
+
+.navMenuOpen .logoName {
+  display: inline !important;
+  color: var(--foreground);
+}
+
+
+/* ─── BUTTONS ──────────────────────────────────────────────── */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  background: var(--foreground);
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid var(--foreground);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  background: var(--color-paperboard-brown);
+  border-color: var(--color-paperboard-brown);
   transform: translateY(-2px);
 }
 
-.buttonAccent {
-  background: var(--accent);
-  color: var(--foreground);
-}
-.buttonAccent:hover {
-  background: var(--color-butternut-yellow);
-}
-
-/* Footer */
-.footer {
-  background: var(--foreground);
-  color: var(--color-white);
-  padding: 5rem 2rem 2rem;
-  margin-top: 0;
-}
-
-.footerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.footerCol h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: var(--foreground);
+  border-radius: 8px;
+  border: 2px solid var(--color-warm-faint);
+  transition: border-color 0.2s, transform 0.2s;
 }
 
-.footerLinks {
+.btnOutline:hover {
+  border-color: var(--color-paperboard-brown);
+  transform: translateY(-2px);
+}
+
+/* ─── HERO ─────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  background: var(--color-charcoal-black);
+  color: #fff;
+  padding: 11rem 2rem 8rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroInner {
+  max-width: 820px;
+}
+
+.heroInner > * {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.heroInner > *:nth-child(1) { animation-delay: 0.05s; }
+.heroInner > *:nth-child(2) { animation-delay: 0.2s; }
+.heroInner > *:nth-child(3) { animation-delay: 0.35s; }
+.heroInner > *:nth-child(4) { animation-delay: 0.5s; }
+
+.heroInner .eyebrow {
+  color: var(--color-paperboard-brown);
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.heroBody {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroActions .btnPrimary {
+  background: #fff;
+  color: var(--foreground);
+  border-color: #fff;
+}
+
+.heroActions .btnPrimary:hover {
+  background: var(--color-parchment);
+  border-color: var(--color-parchment);
+}
+
+.heroActions .btnOutline {
+  border-color: rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+.heroActions .btnOutline:hover {
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* ─── ABOUT (Who This Is For) ──────────────────────────────── */
+.about {
+  padding: 7rem 2rem;
+  background: var(--color-parchment);
+}
+
+.aboutInner {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  font-family: var(--font-body);
+  gap: 3.5rem;
 }
 
-.footerLinks a:hover {
-  color: var(--accent);
+.aboutHeader {
+  max-width: 760px;
 }
 
-.bottomBar {
-  max-width: 1200px;
-  margin: 4rem auto 0;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.aboutTitle {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.aboutIntro {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-warm-muted);
+}
+
+.aboutList {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.875rem;
-  color: #a0a0a0;
-  font-family: var(--font-body);
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@media (max-width: 768px) {
+.aboutCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--color-warm-faint);
+  transition: box-shadow 0.2s;
+}
+
+.aboutCard:hover {
+  box-shadow: 0 4px 16px rgba(178,152,127,0.12);
+}
+
+.bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-paperboard-brown);
+  margin-top: 0.55em;
+}
+
+.aboutCardText {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--foreground);
+}
+
+.aboutCardText strong {
+  font-weight: 700;
+}
+
+/* ─── PROGRAMS ─────────────────────────────────────────────── */
+.programs {
+  padding: 7rem 2rem;
+  background: var(--color-parchment-light);
+}
+
+.programBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.programBlock:last-child {
+  margin-bottom: 0;
+}
+
+.programIntro {
+  max-width: 680px;
+}
+
+.programTitle {
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.programDesc {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-warm-muted);
+  margin-bottom: 1rem;
+}
+
+/* Sprint Card */
+.sprintCard {
+  border: 1px solid var(--color-warm-faint);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sprintCardHeader {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid var(--color-warm-faint);
+}
+
+.sprintCardTitle {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.sprintCardMeta {
+  font-size: 0.9375rem;
+  color: var(--color-warm-muted);
+}
+
+.sprintCardBody {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sprintDetail {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-warm-muted);
+}
+
+.sprintGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--color-warm-faint);
+  border: 1px solid var(--color-warm-faint);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sprintSpec {
+  background: var(--color-parchment);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sprintSpecLabel {
+  font-family: var(--font-headline);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-warm-muted);
+}
+
+.sprintSpecValue {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.sprintCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.125rem 2rem;
+  border: 2px solid var(--color-warm-faint);
+  border-radius: 8px;
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sprintCta:hover {
+  border-color: var(--color-paperboard-brown);
+  background: rgba(178,152,127,0.05);
+}
+
+/* Ongoing List */
+.ongoingList {
+  border: 1px solid var(--color-warm-faint);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ongoingCard {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid var(--color-warm-faint);
+}
+
+.ongoingCard:last-child {
+  border-bottom: none;
+}
+
+.ongoingCardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--foreground);
+}
+
+.ongoingCardDesc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-warm-muted);
+}
+
+/* ─── TESTIMONIALS ─────────────────────────────────────────── */
+.testimonials {
+  padding: 7rem 2rem;
+  background: var(--color-parchment);
+}
+
+.testimonialsHeader {
+  margin-bottom: 3.5rem;
+}
+
+.testimonialsTitle {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+}
+
+.testimonialsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quoteCard {
+  background: #fff;
+  border: 1px solid var(--color-warm-faint);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  transition: box-shadow 0.2s;
+}
+
+.quoteCard:hover {
+  box-shadow: 0 4px 20px rgba(178,152,127,0.1);
+}
+
+.quoteText {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  font-style: italic;
+  color: var(--foreground);
+}
+
+.quoteFooter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.quoteAvatar {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-paperboard-brown);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 0.8125rem;
+}
+
+.quoteAttribution {
+  font-size: 0.9375rem;
+  color: var(--color-warm-muted);
+}
+
+/* ─── ABOUT ANDREW ─────────────────────────────────────────── */
+.about2 {
+  padding: 7rem 2rem;
+  background: var(--color-parchment-light);
+  border-top: 1px solid var(--color-warm-faint);
+}
+
+.about2Inner {
+  max-width: 760px;
+}
+
+.about2Title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+}
+
+.about2Body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-warm-muted);
+  margin-bottom: 1.25rem;
+}
+
+.credentialTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-top: 2.5rem;
+}
+
+.credentialTag {
+  display: inline-block;
+  padding: 0.5rem 1.125rem;
+  border: 1.5px solid var(--color-warm-faint);
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--foreground);
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.credentialTag:hover {
+  border-color: var(--color-paperboard-brown);
+}
+
+/* ─── CTA ──────────────────────────────────────────────────── */
+.cta {
+  padding: 8rem 2rem;
+  background: var(--color-parchment);
+  border-top: 1px solid var(--color-warm-faint);
+  text-align: center;
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  max-width: 640px;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+}
+
+.ctaBody {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--color-warm-muted);
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ─── FOOTER ───────────────────────────────────────────────── */
+.footer {
+  background: var(--color-charcoal-black);
+  padding: 2.25rem 5rem;
+}
+
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #fff;
+}
+
+.footerLogoName {
+  color: #fff;
+}
+
+.footerTagline {
+  font-family: var(--font-headline);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-paperboard-brown);
+}
+
+/* ─── RESPONSIVE ───────────────────────────────────────────── */
+
+/* Tablet + mobile shared */
+@media (max-width: 900px) {
   .nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 1.75rem;
   }
+
+  .navCta {
+    display: none; /* hide CTA button on tablet, use hamburger menu instead */
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  /* ── Global container ── */
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+
+  /* ── Hamburger — always white on dark hero, parchment bg after scroll ── */
+  .hamburger {
+    display: flex;
+    z-index: 110;
+  }
+
+  /* Keep hamburger bars visible on dark hero */
+  .hamburgerBar {
+    background: #fff;
+  }
+
+  .navScrolled .hamburgerBar {
+    background: var(--color-charcoal-black);
+  }
+
+  /* ── Mobile nav drawer ── */
   .navLinks {
-    flex-wrap: wrap;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-parchment);
+    padding: 6rem 2rem 3rem;
+    z-index: 99;
+    overflow-y: auto;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navOpen .navLink {
+    font-size: 1.75rem;
+    font-family: var(--font-headline);
+    font-weight: 700;
+    opacity: 1;
+    color: var(--foreground);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-warm-faint);
+    width: 100%;
+  }
+
+  /* Show the CTA inside the mobile menu */
+  .navOpen .navCta {
+    display: inline-flex;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
     justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* ── Logo — hide name text, show only RF mark ── */
+  .logoName {
+    display: none;
+  }
+
+  /* When nav is open, logo name shows again over white bg */
+  .navOpen ~ .logo .logoName {
+    display: inline;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 8rem 1.5rem 5rem;
+    min-height: 100svh;
+    align-items: flex-start;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+    letter-spacing: -0.025em;
+  }
+
+  .heroBody {
+    font-size: 1.0625rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  /* ── Buttons ── */
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+
+  /* ── About / Who This Is For ── */
+  .about {
+    padding: 5rem 1.5rem;
+  }
+
+  .aboutInner {
+    gap: 2.5rem;
+  }
+
+  .aboutTitle {
+    font-size: clamp(1.625rem, 6.5vw, 2rem);
+  }
+
+  .aboutCard {
+    padding: 1.25rem 1.25rem;
     gap: 1rem;
   }
-  .footerContainer {
-    flex-direction: column;
+
+  .aboutCardText {
+    font-size: 0.9375rem;
   }
-  .bottomBar {
+
+  /* ── Programs ── */
+  .programs {
+    padding: 5rem 1.5rem;
+  }
+
+  .programBlock {
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+
+  .programTitle {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .programDesc {
+    font-size: 1rem;
+  }
+
+  .sprintCardHeader {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .sprintCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .sprintCardBody {
+    padding: 1.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .sprintGrid {
+    grid-template-columns: 1fr 1fr; /* keep 2 col on most phones — it fits */
+  }
+
+  .sprintSpec {
+    padding: 1rem 1rem;
+  }
+
+  .sprintSpecValue {
+    font-size: 1rem;
+  }
+
+  .ongoingCard {
+    padding: 1.5rem 1.5rem;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials {
+    padding: 5rem 1.5rem;
+  }
+
+  .testimonialsHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonialsTitle {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+
+  .quoteCard {
+    padding: 1.75rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .quoteText {
+    font-size: 1rem;
+  }
+
+  /* ── About Andrew ── */
+  .about2 {
+    padding: 5rem 1.5rem;
+  }
+
+  .about2Title {
+    font-size: clamp(1.625rem, 6.5vw, 2rem);
+  }
+
+  .about2Body {
+    font-size: 1rem;
+  }
+
+  .credentialTags {
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .credentialTag {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.875rem;
+  }
+
+  /* ── CTA ── */
+  .cta {
+    padding: 5rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: clamp(1.875rem, 8vw, 2.5rem);
+  }
+
+  .ctaBody {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .ctaActions {
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    gap: 0.75rem;
     text-align: center;
   }
 }
+
+/* Very small phones (≤400px) */
+@media (max-width: 400px) {
+  .heroTitle {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .sprintGrid {
+    grid-template-columns: 1fr; /* stack specs on tiny screens */
+  }
+
+  .credentialTag {
+    font-size: 0.8125rem;
+  }
+}
+

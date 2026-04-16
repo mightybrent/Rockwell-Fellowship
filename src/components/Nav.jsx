@@ -1,38 +1,43 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import styles from './components.module.css';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import styles from "./components.module.css";
 
 export default function Nav() {
-  const [activeSection, setActiveSection] = useState("");
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, { rootMargin: "-50% 0px -50% 0px" });
-
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <nav className={styles.nav}>
-      <Link href="/" className={styles.logo}>
+    <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""} ${menuOpen ? styles.navMenuOpen : ""}`}>
+      <Link href="/" className={styles.logo} style={{ zIndex: 110, position: "relative" }}>
         <span className={styles.logoMark}>RF</span>
-        Rockwell Fellowship
+        <span className={styles.logoName}>Rockwell Fellowship</span>
       </Link>
-      <div className={styles.navLinks}>
-        <Link href="#about" className={`${styles.navLink} ${activeSection === 'about' ? styles.active : ''}`}>About</Link>
-        <Link href="#programs" className={`${styles.navLink} ${activeSection === 'programs' ? styles.active : ''}`}>Programs</Link>
-        <Link href="#impact" className={`${styles.navLink} ${activeSection === 'impact' ? styles.active : ''}`}>Impact</Link>
-        <Link href="#apply" className={styles.button}>Apply Now</Link>
+
+      <div className={`${styles.navLinks} ${menuOpen ? styles.navOpen : ""}`}>
+        <Link href="#about" className={styles.navLink} onClick={() => setMenuOpen(false)}>About</Link>
+        <Link href="#programs" className={styles.navLink} onClick={() => setMenuOpen(false)}>Programs</Link>
+        <Link href="#testimonials" className={styles.navLink} onClick={() => setMenuOpen(false)}>Clients</Link>
+        <Link href="#apply" className={styles.navCta} onClick={() => setMenuOpen(false)}>Get in Touch</Link>
       </div>
+
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+      >
+        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen1 : ""}`} />
+        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen2 : ""}`} />
+        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen3 : ""}`} />
+      </button>
     </nav>
   );
 }

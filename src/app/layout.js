@@ -1,41 +1,29 @@
-import { Montserrat, Nunito_Sans, Playfair_Display } from "next/font/google";
+import { Montserrat, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-// Using Montserrat as a close fallback for Proxima Nova
+// Montserrat = close match for Proxima Nova
 const proximaNovaFallback = Montserrat({
   variable: "--font-proxima-nova",
   subsets: ["latin"],
-  weight: ["400", "700", "800"],
+  weight: ["400", "600", "700", "800"],
 });
 
-// Using Nunito Sans as a close fallback for Avenir
+// Nunito Sans = close match for Avenir
 const avenirFallback = Nunito_Sans({
   variable: "--font-avenir",
   subsets: ["latin"],
-  weight: ["400", "800", "900"],
-});
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "700", "800", "900"],
+  weight: ["400", "600", "700", "800"],
 });
 
 export const metadata = {
-  title: "Rockwell Fellowship",
-  description: "Building communities and transforming lives.",
+  title: "Rockwell Fellowship — Leadership Coaching · Washington D.C.",
+  description:
+    "Executive coaching for founders and senior leaders at scaling companies. The Coaching Sprint: 5 sessions, one focused challenge.",
   openGraph: {
     title: "Rockwell Fellowship",
-    description: "Building communities and transforming lives.",
-    url: "https://rockwell-fellowship.vercel.app",
+    description: "Executive coaching for founders and senior leaders.",
+    url: "https://rockwellfellowship.com",
     siteName: "Rockwell Fellowship",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -43,8 +31,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
-      <body className={`${proximaNovaFallback.variable} ${avenirFallback.variable} ${playfairDisplay.variable}`}>
+    <html lang="en">
+      <body
+        className={`${proximaNovaFallback.variable} ${avenirFallback.variable}`}
+      >
         {children}
       </body>
     </html>
