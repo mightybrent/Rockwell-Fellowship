@@ -9,9 +9,6 @@ export default function Footer() {
           <span className={styles.logoMark}>RF</span>
           <span className={styles.footerLogoName}>Rockwell Fellowship</span>
         </Link>
-        <p className={styles.footerTagline}>
-          Visual Identity System — Version 01 · April 2021 · Confidential
-        </p>
       </div>
     </footer>
   );
