@@ -5,10 +5,10 @@ export default function Page() {
 <nav>
   <a href="#" className="nav-logo"><img src="/images/rockwell-fellowship-logo.png" alt="Rockwell Fellowship" style={{ height: "20px", width: "auto", display: "block", opacity: "0.4" }} /></a>
   <ul className="nav-links">
-    <li><a href="#">Approach</a></li>
-    <li><a href="#">Work Together</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#" className="nav-cta">Get in Touch</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#work-together">Work Together</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" className="nav-cta">Get in Touch</a></li>
   </ul>
 </nav>
 
@@ -37,7 +37,7 @@ export default function Page() {
   </div>
 </section>
 
-<div className="pov-strip">
+<div className="pov-strip" id="approach">
   <div className="pov-photo-bg"></div>
   <div className="pov-photo-overlay"></div>
   <div className="pov-inner">
@@ -73,7 +73,7 @@ export default function Page() {
   </div>
 </section>
 
-<section className="offers-section">
+<section className="offers-section" id="work-together">
   <div className="section-inner">
     <span className="section-eyebrow">Work Together</span>
     <h2 className="section-headline">Two ways to <em>engage</em></h2>
@@ -137,7 +137,7 @@ export default function Page() {
   </div>
 </section>
 
-<section className="about-section">
+<section className="about-section" id="about">
   <div className="about-inner">
     <div className="about-photo-box">
       <img src="/images/2019 to 2025.png" alt="Andrew Smith" />
@@ -209,7 +209,7 @@ export default function Page() {
   </div>
 </section>
 
-<section className="contact-section">
+<section className="contact-section" id="contact">
   <div className="contact-inner">
     <div className="gold-rule" style={{ margin: "0 auto 20px" }}></div>
     <h2 className="contact-headline">Ready to stop <em>circling?</em></h2>
