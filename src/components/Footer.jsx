@@ -1,29 +1,25 @@
-import styles from "./components.module.css";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className="container">
-        <div className={styles.footerInner}>
-          <div className={styles.footerBrand}>
-            <Link href="/" className={styles.logo}>
-              <span className={styles.logoMark}>RF</span>
-              <span className={styles.logoName}>Rockwell Fellowship</span>
-            </Link>
-          </div>
-          
-          <div className={styles.footerLinks}>
-            <Link href="#about" className={styles.footerLink}>About</Link>
-            <Link href="#programs" className={styles.footerLink}>Programs</Link>
-            <Link href="#testimonials" className={styles.footerLink}>Impact</Link>
-          </div>
-
-          <div className={styles.footerLegal}>
-            <p>&copy; {new Date().getFullYear()} Rockwell Fellowship. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
+    <footer style={{
+      background: "#faf8f3",
+      borderTop: "1px solid rgba(26,25,22,0.12)",
+      padding: "32px 72px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    }}>
+      <span style={{
+        fontFamily: "var(--font-headline, 'Playfair Display', Georgia, serif)",
+        fontSize: 13,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        color: "#8a8880",
+      }}>The Rockwell Fellowship</span>
+      <span style={{ fontSize: 12, color: "#8a8880" }}>
+        © {new Date().getFullYear()} · All rights reserved
+      </span>
     </footer>
   );
 }

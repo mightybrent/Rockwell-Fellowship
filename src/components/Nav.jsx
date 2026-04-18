@@ -1,12 +1,10 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "./components.module.css";
+import Image from "next/image";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -15,29 +13,70 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""} ${menuOpen ? styles.navMenuOpen : ""}`}>
-      <Link href="/" className={styles.logo} style={{ zIndex: 110, position: "relative" }}>
-        <span className={styles.logoMark}>RF</span>
-        <span className={styles.logoName}>Rockwell Fellowship</span>
-      </Link>
-
-      <div className={`${styles.navLinks} ${menuOpen ? styles.navOpen : ""}`}>
-        <Link href="#about" className={styles.navLink} onClick={() => setMenuOpen(false)}>About</Link>
-        <Link href="#programs" className={styles.navLink} onClick={() => setMenuOpen(false)}>Programs</Link>
-        <Link href="#testimonials" className={styles.navLink} onClick={() => setMenuOpen(false)}>Clients</Link>
-        <Link href="#apply" className={styles.navCta} onClick={() => setMenuOpen(false)}>Get in Touch</Link>
-      </div>
-
-      <button
-        className={styles.hamburger}
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen}
-      >
-        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen1 : ""}`} />
-        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen2 : ""}`} />
-        <span className={`${styles.hamburgerBar} ${menuOpen ? styles.barOpen3 : ""}`} />
-      </button>
+    <nav style={{
+      position: "fixed",
+      top: 0, left: 0, right: 0,
+      zIndex: 100,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      padding: "20px 72px",
+      background: scrolled ? "rgba(26,25,22,0.95)" : "transparent",
+      backdropFilter: scrolled ? "blur(10px)" : "none",
+      borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "none",
+      transition: "all 0.3s ease",
+    }}>
+      <a href="#" style={{ display: "flex", alignItems: "center" }}>
+        <Image
+          src="/images/2019 to 2025.png"
+          alt="Rockwell Fellowship"
+          width={120}
+          height={24}
+          style={{ height: 20, width: "auto", opacity: 0.4, objectFit: "contain" }}
+        />
+      </a>
+      <ul style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 40,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+      }}>
+        {[
+          { label: "Approach", href: "#about" },
+          { label: "Work Together", href: "#programs" },
+          { label: "About", href: "#andrew" },
+        ].map((item) => (
+          <li key={item.label}>
+            <a href={item.href} style={{
+              fontSize: 13,
+              letterSpacing: "0.04em",
+              color: "rgba(255,255,255,0.7)",
+              textDecoration: "none",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={e => e.target.style.color = "#fff"}
+            onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.7)"}
+            >{item.label}</a>
+          </li>
+        ))}
+        <li>
+          <a href="#contact" style={{
+            fontSize: 12,
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: "#b8922a",
+            border: "1px solid rgba(184,146,42,0.4)",
+            padding: "8px 20px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={e => { e.target.style.borderColor = "#b8922a"; e.target.style.color = "#fff"; e.target.style.background = "#b8922a"; }}
+          onMouseLeave={e => { e.target.style.borderColor = "rgba(184,146,42,0.4)"; e.target.style.color = "#b8922a"; e.target.style.background = "transparent"; }}
+          >Get in Touch</a>
+        </li>
+      </ul>
     </nav>
   );
 }
