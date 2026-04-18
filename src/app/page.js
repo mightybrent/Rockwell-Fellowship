@@ -140,7 +140,7 @@ export default function Page() {
 <section className="about-section">
   <div className="about-inner">
     <div className="about-photo-box">
-      <img src="/images/mediensturmer-aWf7mjwwJJo-unsplash (1).jpg" alt="Andrew Smith" />
+      <img src="/images/2019 to 2025.png" alt="Andrew Smith" />
       <div className="about-accent-bar"></div>
     </div>
     <div>
