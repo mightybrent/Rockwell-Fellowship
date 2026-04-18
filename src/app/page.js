@@ -3,7 +3,7 @@ export default function Page() {
   return (
     <>
 <nav>
-  <a href="#" className="nav-logo"><img src="/images/2019 to 2025.png" alt="Rockwell Fellowship" style={{ height: "20px", width: "auto", display: "block", opacity: "0.4" }} /></a>
+  <a href="#" className="nav-logo"><img src="/images/rockwell-fellowship-logo.png" alt="Rockwell Fellowship" style={{ height: "20px", width: "auto", display: "block", opacity: "0.4" }} /></a>
   <ul className="nav-links">
     <li><a href="#">Approach</a></li>
     <li><a href="#">Work Together</a></li>
@@ -227,7 +227,7 @@ export default function Page() {
 </section>
 
 <footer>
-  <img src="/images/2019 to 2025.png" alt="Rockwell Fellowship" style={{ height: "20px", width: "auto", display: "block", filter: "brightness(0)", opacity: "0.4" }} />
+  <img src="/images/rockwell-fellowship-logo.png" alt="Rockwell Fellowship" style={{ height: "20px", width: "auto", display: "block", filter: "brightness(0)", opacity: "0.4" }} />
   <span className="footer-note">© 2026 · rockwellfellowship.com</span>
 </footer>
     </>
