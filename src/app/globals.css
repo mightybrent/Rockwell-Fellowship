@@ -17,7 +17,7 @@ nav{position:sticky;top:0;z-index:100;padding:18px 48px;display:flex;align-items
 .btn-primary{background:var(--ink);color:var(--white);padding:13px 28px;border-radius:2px;text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.04em;display:inline-block}
 .btn-ghost{color:var(--ink);font-size:13px;font-weight:400;text-decoration:none;letter-spacing:0.02em;border-bottom:1px solid var(--border);padding-bottom:2px}
 .hero-right{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:56px;overflow:hidden}
-.hero-photo-bg{position:absolute;inset:0;background:url('/images/ren-ran-O-8Fmpx7HqQ-unsplash (1).jpg') center/cover no-repeat}
+.hero-photo-bg{position:absolute;inset:0;background:url('/images/dominik-schroder-FIKD9t5_5zQ-unsplash (1).jpg') center/cover no-repeat}
 .hero-photo-overlay{position:absolute;inset:0;background:rgba(26,25,22,0.72)}
 .hero-content{position:relative;z-index:1}
 .hero-stat-row{display:flex;gap:40px;margin-top:32px;border-top:1px solid rgba(255,255,255,0.1);padding-top:32px}
@@ -34,7 +34,7 @@ section{padding:100px 72px}
 .section-headline em{font-style:italic;color:var(--gold)}
 .section-body{font-size:17px;font-weight:300;color:var(--ink-soft);line-height:1.8;max-width:560px}
 .pov-strip{position:relative;padding:72px;overflow:hidden}
-.pov-photo-bg{position:absolute;inset:0;background:url('/images/dominik-schroder-FIKD9t5_5zQ-unsplash (1).jpg') center/cover no-repeat}
+.pov-photo-bg{position:absolute;inset:0;background:url('/images/ren-ran-O-8Fmpx7HqQ-unsplash (1).jpg') center/cover no-repeat}
 .pov-photo-overlay{position:absolute;inset:0;background:rgba(20,18,14,0.82)}
 .pov-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .pov-headline{font-family:var(--serif);font-size:clamp(26px,3vw,38px);color:var(--white);font-weight:400;line-height:1.25;margin-bottom:24px}
