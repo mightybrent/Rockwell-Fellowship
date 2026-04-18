@@ -163,7 +163,7 @@ export default function Page() {
 </section>
 
 <div style={{ position: "relative", height: "420px", overflow: "hidden" }}>
-  <img src="/images/pexels-quang-nguyen-vinh-2132087 (1).jpg" alt="Working together" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+  <img src="/images/mediensturmer-aWf7mjwwJJo-unsplash (1).jpg" alt="Working together" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
   <div style={{ position: "absolute", inset: "0", background: "linear-gradient(to right,rgba(26,25,22,0.72) 0%,rgba(26,25,22,0.2) 60%,rgba(26,25,22,0.0) 100%)", display: "flex", alignItems: "center", padding: "0 80px" }}>
     <p style={{ fontFamily: "'Playfair Display',Georgia,serif", fontSize: "clamp(22px,3vw,36px)", color: "#fff", fontStyle: "italic", maxWidth: "560px", lineHeight: "1.45" }}>"The work we do together happens in conversation — and changes how you show up everywhere else."</p>
   </div>
