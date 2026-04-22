@@ -18,8 +18,8 @@ export default function Page() {
           <h1 className="hero-headline">Has your leadership kept pace with your <em>company?</em></h1>
           <p className="hero-sub">I work with founders and senior leaders navigating the moment when their business changes faster than their skills or sense of self can keep up.</p>
           <div className="hero-actions">
-            <a href="#" className="btn-primary">See how we work</a>
-            <a href="#" className="btn-ghost">Learn about Andrew</a>
+            <a href="#work-together" className="btn-primary">See how we work</a>
+            <a href="#about" className="btn-ghost">Learn about Andrew</a>
           </div>
         </div>
         <div className="hero-right">
@@ -129,7 +129,7 @@ export default function Page() {
                     <p className="retainer-option-desc">Brought in by a board, a CEO, or a VP of People to work directly with a leader or small team. Results-forward, not soft. Inquire for scope and pricing.</p>
                   </div>
                 </div>
-                <a href="#" className="sprint-apply" style={{ marginTop: "8px" }}>Start a conversation →</a>
+                <a href="#contact" className="sprint-apply" style={{ marginTop: "8px" }}>Start a conversation →</a>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function Page() {
         <div className="contact-inner">
           <div className="gold-rule" style={{ margin: "0 auto 20px" }}></div>
           <h2 className="contact-headline">Ready to stop <em>circling?</em></h2>
-          <p className="contact-sub">Start with a conversation. Tell me what's on your mind and we'll figure out together whether this is the right fit.</p>
+          <p className="contact-sub">Book a 30 minute introduction to see how we might work together. Bring some initial thoughts on why coaching, why now, and we’ll take it from there.</p>
           <a href="https://calendly.com/rockwellfellowship/" 
              target="_blank" 
              className="btn-primary">
