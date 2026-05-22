@@ -31,7 +31,7 @@ export default function Page() {
             <p className="hero-quote-attr">— Andrew Smith, Founder</p>
             <div className="hero-stat-row">
               <div><div className="hero-stat-num">15+</div><div className="hero-stat-label">Years in org leadership</div></div>
-              <div><div className="hero-stat-num">F200</div><div className="hero-stat-label">to venture-backed startups</div></div>
+              <div><div className="hero-stat-num">Fortune 500</div><div className="hero-stat-label">to venture-backed startups</div></div>
             </div>
           </div>
         </div>
@@ -148,13 +148,13 @@ export default function Page() {
             <h2 className="about-name">Andrew Smith</h2>
             <span className="about-title">Founder, The Rockwell Fellowship</span>
             <div className="about-body">
-              <p>I led People and HR teams at scaling companies — including high-growth startups and Fortune 500 organizations. I've been in the room when the org restructures. I've run the layoff. I've watched capable leaders get smaller as their companies got larger, and helped them find their way back. I've done that work quietly for years. The Rockwell Fellowship is where I do it out loud.</p>
-              <p>I'm Georgetown-trained in executive coaching and formerly ICF-ACC certified. More importantly, I've been coaching leaders informally for most of my career — in hallways, over coffee, in 1:1s that went longer than scheduled because something real was happening.</p>
-              <p>I'm direct and warm. I won't cheerleader you. I'll help you grow.</p>
+              <p>I led People and HR teams at scaling companies — including high-growth startups and Fortune 500 organizations. I've been in the room when the organization restructures. I've run the layoff. I've watched capable leaders get smaller as their companies got larger, and helped them find their way back. I've done that work quietly for years. The Rockwell Fellowship is where I do it out loud.</p>
+              <p>I'm Georgetown-trained in executive coaching and ICF certified. More importantly, I've coached leaders externally for years, and recently internally as a senior HR leader with an operator’s experience. I know the impact leaders have when they break through what’s holding them back and their teams and businesses flourish as a result.</p>
+              <p>I'm honest, direct, and I’m in your corner. I won't cheerlead you. I won’t just tell you what you want to hear. I'll help you grow.</p>
             </div>
             <div className="about-credentials">
               <span className="credential-pill">Georgetown Certified Coach</span>
-              <span className="credential-pill">ICF-ACC In Progress</span>
+              <span className="credential-pill">ICF Certified</span>
               <span className="credential-pill">M.S. I/O Psychology</span>
               <span className="credential-pill">15+ Years HR Leadership</span>
             </div>
