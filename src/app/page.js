@@ -1,5 +1,19 @@
 'use client';
 export default function Page() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get('firstName') || '';
+    const lastName = formData.get('lastName') || '';
+    const email = formData.get('email') || '';
+    const message = formData.get('message') || '';
+
+    const subject = `Inquiry from ${firstName} ${lastName}`.trim() || 'Rockwell Fellowship Inquiry';
+    const body = `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    window.location.href = `mailto:rockwellfellowship@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <>
       <nav>
@@ -214,18 +228,18 @@ export default function Page() {
           <div className="gold-rule" style={{ margin: "0 auto 20px" }}></div>
           <h2 className="contact-headline">Ready to stop <em>circling?</em></h2>
           <p className="contact-sub">Book a 30 minute introduction to see how we might work together. Bring some initial thoughts on why coaching, why now, and we’ll take it from there.</p>
-          <a href="https://calendly.com/rockwellfellowship/" 
-             target="_blank" 
-             className="btn-primary">
+          <a href="https://calendly.com/rockwellfellowship/"
+            target="_blank"
+            className="btn-primary">
             Book a 30-minute intro call →
           </a>
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
-              <div className="form-field"><label className="form-label">First Name</label><input type="text" /></div>
-              <div className="form-field"><label className="form-label">Last Name</label><input type="text" /></div>
+              <div className="form-field"><label className="form-label">First Name</label><input type="text" name="firstName" /></div>
+              <div className="form-field"><label className="form-label">Last Name</label><input type="text" name="lastName" /></div>
             </div>
-            <div className="form-field"><label className="form-label">Email</label><input type="email" /></div>
-            <div className="form-field form-textarea"><label className="form-label">What's on your mind?</label><textarea rows="4"></textarea></div>
+            <div className="form-field"><label className="form-label">Email</label><input type="email" name="email" /></div>
+            <div className="form-field form-textarea"><label className="form-label">What's on your mind?</label><textarea name="message" rows="4"></textarea></div>
             <div className="form-submit"><button type="submit">Send a note →</button></div>
           </form>
         </div>
