@@ -206,8 +206,8 @@ export default function Page() {
             </div>
             <div className="testimonial-card">
               <div className="testimonial-quote-mark">"</div>
-              <p className="testimonial-text">Andrew was able to help me see things I had been mulling over for weeks in a new light. He synthesizes a variety of thoughts and snippets of conversation into a coherent framework for decision making that moved me forward faster.</p>
-              <p className="testimonial-attr">MBA Program Director</p><p className="testimonial-role"></p>
+              <p className="testimonial-text">Andrew was vital before, during, and after my role transition. He helped me develop my True North, which served as an anchor for my leadership without losing my authentic edge. Five years later, his strategic guidance and ability to hold space remain essential.</p>
+              <p className="testimonial-attr">Jesse</p><p className="testimonial-role">COO</p>
             </div>
             <div className="testimonial-card">
               <div className="testimonial-quote-mark">"</div>
