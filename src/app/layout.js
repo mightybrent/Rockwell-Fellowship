@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rockwell Fellowship — Leadership Coaching for Founders & Senior Leaders",
+  title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
   description:
-    "Leadership coaching for founders and senior leaders at scaling companies. Andrew Smith helps leaders grow ahead of the pace of their organization. Georgetown-trained executive coach based in Northern Virginia.",
+    "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
   robots: {
     index: true,
     follow: true,
@@ -12,9 +12,9 @@ export const metadata = {
     canonical: "https://rockwellfellowship.com/",
   },
   openGraph: {
-    title: "Rockwell Fellowship — Leadership Coaching for Founders & Senior Leaders",
+    title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
     description:
-      "I work with founders and senior leaders navigating the moment when their business changes faster than their skills or sense of self can keep up.",
+      "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
     url: "https://rockwellfellowship.com/",
     type: "website",
     images: [
@@ -25,9 +25,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rockwell Fellowship — Leadership Coaching for Founders & Senior Leaders",
+    title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
     description:
-      "I work with founders and senior leaders navigating the moment when their business changes faster than their skills or sense of self can keep up.",
+      "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
   },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
               "@type": "ProfessionalService",
               "name": "Rockwell Fellowship",
               "description":
-                "Leadership coaching for founders and senior leaders at scaling companies. Specializing in the VP cohort navigating the gap between what got them here and what the next stage requires.",
+                "Leadership coaching for the director and VP layer at scaling companies. Specializing in the VP cohort navigating the gap between what got them here and what the next stage requires.",
               "founder": {
                 "@type": "Person",
                 "name": "Andrew Smith",

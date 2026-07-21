@@ -29,8 +29,8 @@ export default function Page() {
       <section className="hero" style={{ padding: "0" }}>
         <div className="hero-left">
           <span className="hero-eyebrow">Leadership Coaching &amp; Talent Advisory</span>
-          <h1 className="hero-headline">Has your leadership kept pace with your <em>company?</em></h1>
-          <p className="hero-sub">I work with founders and senior leaders navigating the moment when their business changes faster than their skills or sense of self can keep up.</p>
+          <h1 className="hero-headline">When the role gets bigger than the person who's in it.</h1>
+          <p className="hero-sub">I coach the director and VP layer through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era the leaders below the top are being asked to carry.</p>
           <div className="hero-actions">
             <a href="#work-together" className="btn-primary">See how we work</a>
             <a href="#about" className="btn-ghost">Learn about Andrew</a>
@@ -41,7 +41,7 @@ export default function Page() {
           <div className="hero-photo-overlay"></div>
           <div className="hero-content">
             <div className="hero-quote-mark">"</div>
-            <p className="hero-quote">I've watched capable people get stuck when their business changes faster than their skills or personal transformation can catch up.</p>
+            <p className="hero-quote">It usually starts with someone senior who can feel that a couple of their leaders are being asked for more than they've had to give before, and that the cost of not helping them grow into it is real.</p>
             <p className="hero-quote-attr">— Andrew Smith, Founder</p>
             <div className="hero-stat-row">
               <div><div className="hero-stat-num">15+</div><div className="hero-stat-label">Years in org leadership</div></div>
@@ -77,8 +77,8 @@ export default function Page() {
           <div className="who-grid" style={{ gridTemplateColumns: "1fr", border: "1px solid var(--border)", marginTop: "48px" }}>
             <div className="who-col" style={{ borderRight: "none" }}>
               <ul className="who-list">
-                <li>The founder who built something real, but now leads 40 people the way they led 4 — and can feel the drag.</li>
                 <li>The VP who keeps getting promoted into roles that require something their track record can't fully prepare them for.</li>
+                <li>The leader carrying a bigger mandate than the one they were hired into, running the new size the way they ran the old one, and starting to feel the drag.</li>
                 <li>The person at an inflection point — a transition, a decision, a moment they can't quite name — who needs space to think, not someone to cheer them on.</li>
                 <li>The leader who's been losing themselves to the role — and is ready to reclaim some perspective before that gap gets wider.</li>
               </ul>
@@ -101,8 +101,8 @@ export default function Page() {
             </div>
             <div className="sprint-card">
               <div className="sprint-card-header">
-                <h4 className="sprint-card-title">Coaching Sprint — Q2 2026</h4>
-                <p className="sprint-card-meta">10 spots · quarterly · next cohort opens May</p>
+                <h4 className="sprint-card-title">Coaching Sprint — next cohort forming</h4>
+                <p className="sprint-card-meta">10 spots · quarterly</p>
               </div>
               <div className="sprint-card-body">
                 <p className="sprint-card-desc">Every sprint begins with a 30-minute intake — just the two of us, no agenda, figuring out what you actually need to work on. Then five hour-long sessions, every other week or so, followed by a check-in 30 days out to see what held. You also get a journal to think between sessions, because the work happens there too.</p>
@@ -120,7 +120,7 @@ export default function Page() {
                     <span className="sprint-spec-value">10 per quarter</span>
                   </div>
                 </div>
-                <a href="#" className="sprint-apply">Apply for the next sprint →</a>
+                <a href="mailto:rockwellfellowship@gmail.com" className="sprint-apply">Apply for the next sprint →</a>
               </div>
             </div>
           </div>
