@@ -168,7 +168,7 @@ export default function Page() {
             </div>
             <div className="about-credentials">
               <span className="credential-pill">Georgetown Certified Coach</span>
-              <span className="credential-pill">ICF Certified</span>
+              <span className="credential-pill">ICF Certified - PCC</span>
               <span className="credential-pill">M.S. I/O Psychology</span>
               <span className="credential-pill">15+ Years HR Leadership</span>
             </div>
