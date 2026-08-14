@@ -163,7 +163,7 @@ export default function Page() {
             <span className="about-title">Founder, The Rockwell Fellowship</span>
             <div className="about-body">
               <p>I led People and HR teams at scaling companies — including high-growth startups and Fortune 500 organizations. I've been in the room when the organization restructures. I've run the layoff. I've watched capable leaders get smaller as their companies got larger, and helped them find their way back. I've done that work quietly for years. The Rockwell Fellowship is where I do it out loud.</p>
-              <p>I'm Georgetown-trained in executive coaching and ICF certified. More importantly, I've coached leaders externally for years, and recently internally as a senior HR leader with an operator’s experience. I know the impact leaders have when they break through what’s holding them back and their teams and businesses flourish as a result.</p>
+              <p>I'm Georgetown-trained in executive coaching and ICF certified - PCC. More importantly, I've coached leaders externally for years, and recently internally as a senior HR leader with an operator’s experience. I know the impact leaders have when they break through what’s holding them back and their teams and businesses flourish as a result.</p>
               <p>I'm honest, direct, and I’m in your corner. I won't cheerlead you. I won’t just tell you what you want to hear. I'll help you grow.</p>
             </div>
             <div className="about-credentials">
