@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
+  title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
   description:
-    "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
+    "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
   robots: {
     index: true,
     follow: true,
@@ -12,9 +12,9 @@ export const metadata = {
     canonical: "https://rockwellfellowship.com/",
   },
   openGraph: {
-    title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
+    title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
     description:
-      "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
+      "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
     url: "https://rockwellfellowship.com/",
     type: "website",
     images: [
@@ -25,9 +25,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rockwell Fellowship — Leadership Coaching for Directors and VPs at Scaling Companies",
+    title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
     description:
-      "Leadership coaching for the director and VP layer at scaling companies. Andrew Smith coaches the leaders a business is counting on to carry its next chapter.",
+      "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
   },
 };
 

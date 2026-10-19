@@ -11,7 +11,7 @@ export default function Page() {
     const subject = `Inquiry from ${firstName} ${lastName}`.trim() || 'Rockwell Fellowship Inquiry';
     const body = `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    window.location.href = `mailto:rockwellfellowship@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:andrew@rockwellfellowship.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -30,7 +30,7 @@ export default function Page() {
         <div className="hero-left">
           <span className="hero-eyebrow">Leadership Coaching &amp; Talent Advisory</span>
           <h1 className="hero-headline">When the role gets bigger than the person who's in it.</h1>
-          <p className="hero-sub">I coach the director and VP layer through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era the leaders below the top are being asked to carry.</p>
+          <p className="hero-sub">I coach senior leaders just below the executive team, directors and VPs, through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era of leadership.</p>
           <div className="hero-actions">
             <a href="#work-together" className="btn-primary">See how we work</a>
             <a href="#about" className="btn-ghost">Learn about Andrew</a>
@@ -41,7 +41,7 @@ export default function Page() {
           <div className="hero-photo-overlay"></div>
           <div className="hero-content">
             <div className="hero-quote-mark">"</div>
-            <p className="hero-quote">It usually starts with someone senior who can feel that a couple of their leaders are being asked for more than they've had to give before, and that the cost of not helping them grow into it is real.</p>
+            <p className="hero-quote">My work usually starts when an executive can feel that a couple of their leaders are being asked for more than they've had to give before. The cost of not helping them grow into it is material to their business.</p>
             <p className="hero-quote-attr">— Andrew Smith, Founder</p>
             <div className="hero-stat-row">
               <div><div className="hero-stat-num">15+</div><div className="hero-stat-label">Years in org leadership</div></div>
@@ -60,8 +60,8 @@ export default function Page() {
             <h2 className="pov-headline">Not cheerleading. Not fluff. <em>Real partnership and impact.</em></h2>
           </div>
           <div>
-            <p className="pov-body">I coach because I know the toll that growing behind the pace of organizations takes on leaders. I came up inside organizations — running HR and talent strategy through hypergrowth, layoffs, leadership transitions, and the kind of ambiguity that doesn't fit in a framework.</p>
-            <p className="pov-body" style={{ marginTop: "16px" }}>When you work with me, you get a partner, coach, and advisor who understands organizational reality and won't let you stay comfortable with a story that isn't serving you anymore.</p>
+            <p className="pov-body">I coach because I know the toll that growing behind the pace of organizations takes on leaders. I came up inside organizations running HR and talent strategy through hypergrowth, layoffs, leadership transitions, and the kind of ambiguity that doesn't fit in a framework.</p>
+            <p className="pov-body" style={{ marginTop: "16px" }}>When you work with me, you get a partner, coach, and an operator who understands organizational reality and won't let you stay comfortable with a story that isn't serving you anymore.</p>
           </div>
         </div>
       </div>
@@ -73,14 +73,14 @@ export default function Page() {
           <span className="section-eyebrow">Right Fit</span>
           <h2 className="section-headline">Who is this <em>actually</em> for</h2>
           <p className="section-body" style={{ maxWidth: "680px" }}>You're good at your job. You've been good at it for a while. Something shifted.</p>
-          <p className="section-body" style={{ maxWidth: "680px", marginTop: "16px" }}>This isn't for people who need to be taught how to lead. It's for people who already know how — and have reached the point where more information isn't what's missing.</p>
+          <p className="section-body" style={{ maxWidth: "680px", marginTop: "16px" }}>This isn't for people who need to be taught how to lead. It's for people who already know how, and have reached the point where more information isn't what's missing.</p>
           <div className="who-grid" style={{ gridTemplateColumns: "1fr", border: "1px solid var(--border)", marginTop: "48px" }}>
             <div className="who-col" style={{ borderRight: "none" }}>
               <ul className="who-list">
-                <li>The VP who keeps getting promoted into roles that require something their track record can't fully prepare them for.</li>
+                <li>The VP who keeps getting promoted into roles that require something their track record hasn't fully prepared them for.</li>
                 <li>The leader carrying a bigger mandate than the one they were hired into, running the new size the way they ran the old one, and starting to feel the drag.</li>
-                <li>The person at an inflection point — a transition, a decision, a moment they can't quite name — who needs space to think, not someone to cheer them on.</li>
-                <li>The leader who's been losing themselves to the role — and is ready to reclaim some perspective before that gap gets wider.</li>
+                <li>The person at an inflection point - a transition, a decision, a moment they can't quite name - who needs space to think, not someone to cheer them on.</li>
+                <li>The leader who's been losing themselves to the role and is ready to reclaim some perspective before that gap gets wider.</li>
               </ul>
             </div>
           </div>
@@ -93,39 +93,6 @@ export default function Page() {
           <h2 className="section-headline">Two ways to <em>engage</em></h2>
 
           <div className="engage-block" style={{ marginTop: "64px" }}>
-            <div className="engage-header">
-              <span className="engage-label">For rapid change</span>
-              <h3 className="engage-title">The Coaching Sprint</h3>
-              <p className="engage-intro">Five sessions over six weeks. One focused challenge. Concentrated enough to create real movement — spaced enough that you can actually think between sessions.</p>
-              <p className="engage-intro" style={{ marginTop: "14px" }}>This isn't general coaching. You bring a specific problem — a decision you're avoiding, a pattern you keep repeating, a leadership moment you can't quite see clearly. We dig into it, hard, until something breaks open.</p>
-            </div>
-            <div className="sprint-card">
-              <div className="sprint-card-header">
-                <h4 className="sprint-card-title">Coaching Sprint — next cohort forming</h4>
-                <p className="sprint-card-meta">10 spots · quarterly</p>
-              </div>
-              <div className="sprint-card-body">
-                <p className="sprint-card-desc">Every sprint begins with a 30-minute intake — just the two of us, no agenda, figuring out what you actually need to work on. Then five hour-long sessions, every other week or so, followed by a check-in 30 days out to see what held. You also get a journal to think between sessions, because the work happens there too.</p>
-                <div className="sprint-specs">
-                  <div className="sprint-spec">
-                    <span className="sprint-spec-label">Sessions</span>
-                    <span className="sprint-spec-value">5 sessions + intake</span>
-                  </div>
-                  <div className="sprint-spec">
-                    <span className="sprint-spec-label">Duration</span>
-                    <span className="sprint-spec-value">6 weeks</span>
-                  </div>
-                  <div className="sprint-spec">
-                    <span className="sprint-spec-label">Spots</span>
-                    <span className="sprint-spec-value">10 per quarter</span>
-                  </div>
-                </div>
-                <a href="mailto:rockwellfellowship@gmail.com" className="sprint-apply">Apply for the next sprint →</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="engage-block" style={{ marginTop: "80px", paddingTop: "80px", borderTop: "1px solid var(--border)" }}>
             <div className="engage-header">
               <span className="engage-label">Ongoing Coaching</span>
               <h3 className="engage-title">Longer engagements for leaders who want a steady thinking partner.</h3>
@@ -148,6 +115,39 @@ export default function Page() {
             </div>
           </div>
 
+          <div className="engage-block" style={{ marginTop: "80px", paddingTop: "80px", borderTop: "1px solid var(--border)" }}>
+            <div className="engage-header">
+              <span className="engage-label">For rapid change</span>
+              <h3 className="engage-title">The Coaching Sprint</h3>
+              <p className="engage-intro">Five sessions over six weeks. One focused challenge. Concentrated enough to create real movement — spaced enough that you can actually think between sessions.</p>
+              <p className="engage-intro" style={{ marginTop: "14px" }}>This isn't general coaching. You bring a specific problem — a decision you're avoiding, a pattern you keep repeating, a leadership moment you can't quite see clearly. We dig into it, hard, until something breaks open.</p>
+            </div>
+            <div className="sprint-card">
+              <div className="sprint-card-header">
+                <h4 className="sprint-card-title">Coaching Sprint</h4>
+                <p className="sprint-card-meta">10 spots · quarterly</p>
+              </div>
+              <div className="sprint-card-body">
+                <p className="sprint-card-desc">Every sprint begins with a 30-minute intake — just the two of us, no agenda, figuring out what you actually need to work on. Then five hour-long sessions, every other week or so, followed by a check-in 30 days out to see what held. You also get a journal to think between sessions, because the work happens there too.</p>
+                <div className="sprint-specs">
+                  <div className="sprint-spec">
+                    <span className="sprint-spec-label">Sessions</span>
+                    <span className="sprint-spec-value">5 sessions + intake</span>
+                  </div>
+                  <div className="sprint-spec">
+                    <span className="sprint-spec-label">Duration</span>
+                    <span className="sprint-spec-value">6 weeks</span>
+                  </div>
+                  <div className="sprint-spec">
+                    <span className="sprint-spec-label">Spots</span>
+                    <span className="sprint-spec-value">10 per quarter</span>
+                  </div>
+                </div>
+                <a href="mailto:andrew@rockwellfellowship.com" className="sprint-apply">Apply for the next sprint →</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -162,8 +162,8 @@ export default function Page() {
             <h2 className="about-name">Andrew Smith</h2>
             <span className="about-title">Founder, The Rockwell Fellowship</span>
             <div className="about-body">
-              <p>I led People and HR teams at scaling companies — including high-growth startups and Fortune 500 organizations. I've been in the room when the organization restructures. I've run the layoff. I've watched capable leaders get smaller as their companies got larger, and helped them find their way back. I've done that work quietly for years. The Rockwell Fellowship is where I do it out loud.</p>
-              <p>I'm Georgetown-trained in executive coaching and ICF certified - PCC. More importantly, I've coached leaders externally for years, and recently internally as a senior HR leader with an operator’s experience. I know the impact leaders have when they break through what’s holding them back and their teams and businesses flourish as a result.</p>
+              <p>I led People and HR teams at scaling companies, including high-growth startups and Fortune 500 organizations. I've been in the room when the organization restructures. I've run the layoff. I've watched capable leaders get smaller as their companies got larger, and helped them find their way back. I've done that work quietly for years. The Rockwell Fellowship is where I do it out loud.</p>
+              <p>I'm Georgetown-certified in executive coaching and ICF credentialed - PCC. More importantly, I've coached leaders externally for years, and recently internally as a senior HR leader with an operator’s experience. I know the impact leaders have when they break through what’s holding them back and their teams and businesses flourish as a result.</p>
               <p>I'm honest, direct, and I’m in your corner. I won't cheerlead you. I won’t just tell you what you want to hear. I'll help you grow.</p>
             </div>
             <div className="about-credentials">
@@ -212,12 +212,12 @@ export default function Page() {
             <div className="testimonial-card">
               <div className="testimonial-quote-mark">"</div>
               <p className="testimonial-text">With Andrew's help, I was able to find and build a solution 2–3 times faster than I would have on my own. We also explored ways to utilize my strengths to make a greater impact with my team.</p>
-              <p className="testimonial-attr">Founder &amp; CEO</p><p className="testimonial-role">Small business</p>
+              <p className="testimonial-attr">Isaac, Founder + CEO</p><p className="testimonial-role">Small business</p>
             </div>
             <div className="testimonial-card">
               <div className="testimonial-quote-mark">"</div>
               <p className="testimonial-text">Andrew's approach to coaching helps me solve challenges, and also helps me evolve my own thought processes and frameworks.</p>
-              <p className="testimonial-attr">CTO</p><p className="testimonial-role">Scaling startup</p>
+              <p className="testimonial-attr">Cat, CTO</p><p className="testimonial-role">Scaling startup</p>
             </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function Page() {
           <div className="gold-rule" style={{ margin: "0 auto 20px" }}></div>
           <h2 className="contact-headline">Ready to stop <em>circling?</em></h2>
           <p className="contact-sub">Book a 30 minute introduction to see how we might work together. Bring some initial thoughts on why coaching, why now, and we’ll take it from there.</p>
-          <a href="https://calendly.com/rockwellfellowship/"
+          <a href="https://calendar.app.google/trYoZvMFMekFK4HU6"
             target="_blank"
             className="btn-primary">
             Book a 30-minute intro call →
