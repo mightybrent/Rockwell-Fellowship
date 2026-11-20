@@ -317,7 +317,7 @@ export default function Page() {
       <section className="about-section" id="about">
         <div className="about-inner">
           <div className="about-photo-box">
-            <img src="/images/Andrew-Headshot-Final-transparent.png" alt="Andrew Smith, founder of The Rockwell Fellowship" />
+            <img src="/images/andrew-headshot.jpg" alt="Andrew Smith, founder of The Rockwell Fellowship" />
             <div className="about-accent-bar"></div>
           </div>
           <div>
