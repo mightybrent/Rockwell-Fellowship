@@ -2,8 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
-  description:
-    "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
+  description: "I coach senior leaders just below the executive team, directors and VPs, through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era of leadership.",
   robots: {
     index: true,
     follow: true,
@@ -13,8 +12,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
-    description:
-      "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
+    description: "I coach senior leaders just below the executive team, directors and VPs, through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era of leadership.",
     url: "https://rockwellfellowship.com/",
     type: "website",
     images: [
@@ -26,8 +24,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
-    description:
-      "Rockwell Fellowship. Leadership Coaching for VPs and Directors at Scaling Companies",
+    description: "I coach senior leaders just below the executive team, directors and VPs, through the transitions that ask more of them than their last role did: a company scaling, a strategy shifting, a new era of leadership.",
   },
 };
 
