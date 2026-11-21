@@ -266,10 +266,10 @@ export default function Page() {
             </div>
 
             <div className="offer-card featured" id="offer-sprint">
-              <div className="offer-badge">Popular</div>
+              <div className="offer-badge" style={{ color: "var(--white)" }}>Popular</div>
               <div className="offer-card-header">
                 <span className="offer-tag">The Coaching Sprint</span>
-                <h3 className="offer-title">A pressing challenge, focused impact.</h3>
+                <h3 className="offer-title" style={{ color: "var(--white)" }}>A pressing challenge, focused impact.</h3>
               </div>
               <p className="offer-desc">When there's a specific leadership hurdle you or a leader on your team needs to break through, and six months feels like the wrong container. Six weeks, focused on one thing. We diagnose, sprint, and check back 30 days later to see what held.</p>
               <ul className="offer-specs">
