@@ -87,7 +87,8 @@ section{padding:100px 72px}
 .offer-card.featured{background:var(--ink)}
 .offer-card.flash{box-shadow:inset 0 0 0 2px var(--gold)}
 .offer-tag{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:20px;display:block}
-.offer-badge{color:var(--white)}
+.offer-badge{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);font-weight:500;margin-bottom:16px;line-height:1;display:block}
+.offer-card:not(.featured) .offer-card-header{padding-top:27px}
 .offer-name,
 .offer-title{font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:8px;color:var(--ink)}
 .offer-card.featured .offer-name,
@@ -171,6 +172,7 @@ footer{background:var(--cream);border-top:1px solid var(--border);padding:32px 7
 
 @media (max-width:900px){
   .offers-grid{grid-template-columns:1fr}
+  .offer-card:not(.featured) .offer-card-header{padding-top:0}
   .insights-grid{grid-template-columns:1fr;gap:32px}
   .fit-result{grid-template-columns:1fr;gap:28px}
   .fit-shape{border-left:none;border-top:1px solid rgba(255,255,255,0.12);padding-left:0;padding-top:24px}
