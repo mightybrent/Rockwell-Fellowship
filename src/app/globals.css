@@ -101,6 +101,10 @@ section{padding:100px 72px}
 .offer-includes li{font-size:13px;color:var(--ink-muted);padding-left:16px;position:relative}
 .offer-includes li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:1px;background:var(--gold)}
 .offer-card.featured .offer-includes li{color:rgba(255,255,255,0.55)}
+.offer-specs{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.offer-specs li{font-size:13px;color:var(--ink-muted);padding-left:16px;position:relative}
+.offer-specs li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:1px;background:var(--gold)}
+.offer-card.featured .offer-specs li{color:rgba(255,255,255,0.85)}
 .offer-note{font-size:13px;font-style:italic;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)}
 .offer-cta{margin-top:auto;display:block;text-align:center;padding:14px;border:1px solid var(--border);border-radius:2px;font-size:13px;color:var(--ink);text-decoration:none;letter-spacing:0.02em;transition:border-color .2s,color .2s}
 .offer-cta:hover{border-color:var(--gold);color:var(--gold)}
